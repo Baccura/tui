@@ -1,6 +1,6 @@
 # Projet 1 - PHP
 
-# Installation du projet
+**Installation du projet**
 
 Prérequis :
 - avoir Docker installer
@@ -32,7 +32,7 @@ Liste des chambres :
 
 # Projet 2 - PHP/HTML
 
-# Installation du projet
+**Installation du projet**
 
 Prérequis :
 - avoir Docker installer et pouvoir utiliser la commande `docker-compose`
