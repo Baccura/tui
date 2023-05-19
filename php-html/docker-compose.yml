@@ -1,0 +1,30 @@
+version: '2'
+services:
+  web:
+    image: lavoweb/php-8.2
+    ports:
+      - "88:80"
+    volumes:
+      - ./web:/var/www/html
+  api:
+    image: lavoweb/php-8.2
+    ports:
+      - "89:80"
+    volumes:
+      - ./api:/var/www/html
+    links:
+      - db:db
+  db:
+    image: mysql
+    volumes:
+      - /mysql:/var/lib/mysql
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8088:80"
+    links:
+      - db:db
